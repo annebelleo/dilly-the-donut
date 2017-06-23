@@ -8,8 +8,14 @@ class Donut
     
     def battle(foe)
         if foe.offense > self.defense
+            #dilly lost the battle :(
+            difference = foe.offense-self.defense
+            @health=@health-difference
             "This donut is toast."
         elsif foe.offense < self.defense
+            #dilly won the battle :)
+            difference = self.defense-foe.offense
+            @health = @health + difference
             "This donut is victorious."
         else
             "BEGIN VEGETABLE OFF"
