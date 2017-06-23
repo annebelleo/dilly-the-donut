@@ -11,12 +11,12 @@ class Donut
             #dilly lost the battle :(
             difference = foe.offense-self.defense
             @health=@health-difference
-            "This donut is toast."
+            "This donut is toast. Her new health is #{@health}"
         elsif foe.offense < self.defense
             #dilly won the battle :)
             difference = self.defense-foe.offense
             @health = @health + difference
-            "This donut is victorious."
+            "This donut is victorious. Her new health is #{@health}"
         else
             "BEGIN VEGETABLE OFF"
         end
